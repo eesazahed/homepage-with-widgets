@@ -7,7 +7,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-color: white;
+  background: white;
 }
 
 a {
@@ -21,7 +21,7 @@ a {
   }
   body {
     color: white;
-    background: #1e1e1e;
+    background: linear-gradient(to left top, #1a56fa, #1e0044);
   }
   a {
     color: #00f3a6;
