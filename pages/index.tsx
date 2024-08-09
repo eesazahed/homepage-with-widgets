@@ -6,6 +6,7 @@ import EmojiLink from "../components/EmojiLink";
 import greeting from "../utils/greeting";
 import { useEffect, useState } from "react";
 import PopUpForm from "../components/PopUpForm";
+import Clock from "../components/Clock";
 
 const Home: NextPage = () => {
   const [username, setUsername] = useState<string>("user");
@@ -35,11 +36,16 @@ const Home: NextPage = () => {
         className={`transition duration-300 ${isPopUpVisible ? "blur-sm" : ""}`}
       >
         <main className="py-16 leading-8 text-xl grid min-h-screen place-items-center">
-          <h1 className="text-6xl md:text-8xl text-center font-bold">
-            <Gradient text="Home" /> &#127968;
-          </h1>
-          <div>
-            <h2 className="text-2xl">
+          <section className="my-4">
+            <h1 className="text-6xl md:text-8xl text-center font-bold">
+              <Gradient text="Home" /> &#127968;
+            </h1>
+          </section>
+
+          <section className="my-4 text-center">
+            <Clock />
+
+            <h2 className="mt-4 text-2xl">
               {greeting()},{" "}
               <span
                 className="cursor-pointer duration-200 hover:text-yellow-500"
@@ -48,8 +54,9 @@ const Home: NextPage = () => {
                 {username}
               </span>
             </h2>
-          </div>
-          <div className="flex flex-wrap justify-center items-center">
+          </section>
+
+          <section className="my-4 flex flex-wrap justify-center items-center">
             <EmojiLink
               emoji="&#128232;"
               text="gmail"
@@ -70,7 +77,7 @@ const Home: NextPage = () => {
               text="github"
               href="https://github.com"
             />
-          </div>
+          </section>
         </main>
 
         <footer className="py-16 text-center">
